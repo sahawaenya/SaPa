@@ -12,7 +12,7 @@ class Controller {
     }
 
     static login (req,res) {
-        res.send ('SaPa hi..')
+        res.render ('login')
     }
 
     static profile (req,res) {
