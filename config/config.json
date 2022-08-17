@@ -3,7 +3,7 @@
     "username": "postgres",
     "password": "postgres",
     "database": "SaPa",
-    "host": "Localhost",
+    "host": "localhost",
     "dialect": "postgres"
   },
   "test": {

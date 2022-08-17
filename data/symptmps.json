@@ -1,0 +1,41 @@
+[
+    {
+        "name":"headache"
+    },
+    {
+        "name":"fatigue"
+    },
+    {
+        "name":"nausea"
+    },
+    {
+        "name":"fever"
+    },
+    {
+        "name":"aches and pain"
+    },
+    {
+        "name":"cough"
+    },
+    {
+        "name":"tiredness"
+    },
+    {
+        "name":"chest pain"
+    },
+    {
+        "name":"sore throat"
+    },
+    {
+        "name":"diarrhoea"
+    },
+    {
+        "name":"a rash"
+    },
+    {
+        "name":"irritated ayes"
+    },
+    {
+        "name":"flu"
+    }
+]
