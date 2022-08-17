@@ -1,6 +1,20 @@
+const { User, Profile } = require('../models/index')
+
 class Controller{
-    static signin (req,res) {
-        res.send ('SaPa hi..')
+    static getSignup (req,res) {
+        res.render('./user/signup')
+    }
+
+    static postSignup (req,res) {
+        // res.send(req.body)
+
+        User.create(req.body)
+        .then((data) => {
+            Profile.create({UserId: data.id})
+            .then((_) => res.redirect('/'))
+            .catch( err => res.send(err))
+            })
+        .catch( err => res.send(err))
     }
 
     static login (req,res) {
