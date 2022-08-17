@@ -9,10 +9,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       SymptompId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : "Symptomps"
+        }
       },
       DiseaseId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : "Diseases"
+        }
       },
       createdAt: {
         allowNull: false,

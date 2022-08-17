@@ -15,13 +15,22 @@ module.exports = {
         type: Sequelize.STRING
       },
       SymptompId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : "Symptomps"
+        }
       },
       DiseaseId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : "Diseases"
+        }
       },
       UserId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : "Users"
+        }
       },
       createdAt: {
         allowNull: false,
