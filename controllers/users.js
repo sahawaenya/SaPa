@@ -1,6 +1,11 @@
 const { User, Profile } = require('../models/index')
 
 class Controller{
+    static home(req, res){
+        res.render('./user/home')
+    }
+
+
     static getSignup (req,res) {
         res.render('./user/signup')
     }
@@ -11,7 +16,7 @@ class Controller{
         User.create(req.body)
         .then((data) => {
             Profile.create({UserId: data.id})
-            .then((_) => res.redirect('/'))
+            .then((_) => res.redirect('/users'))
             .catch( err => res.send(err))
             })
         .catch( err => res.send(err))
