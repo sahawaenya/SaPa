@@ -1,17 +1,16 @@
 const routes = require('express').Router()
-const Controller = require('../controller/index')
+const Controller = require('../controllers/index')
+const users = require('./users')
+const diseases= require('./diseases')
+const symptomps = require('./symptomps')
 
-// penjelasan SaPa + chart.js (numberOfUsers(x), listOfDiseases(y)) + sign in/log in + penjelasan tes Symptomp
+
 routes.get('/', Controller.home)
+routes.use('/users', users)
+routes.use('/diseases', diseases)
+routes.use('/symptoms', symptomps)
 
-// sign in (username, passwords, role, fullname, email)
-routes.get('/user/signin', Controller.signin)
 
-// log in (username, passwords)
-routes.get('/user/login', Controller.login)
-
-// profile + button tes Symptomp (fullname, disease + symptom% + new Date ())
-routes.get('/user/profile', Controller.profile)
 
 // test symptomp output penyakit
 /*
@@ -20,9 +19,9 @@ Gejala apa saja yang anda rasakan?
 - symptomp 2
 dst
 */
-routes.get('/testDiseaseResult', Controller.tesSymptomp)
+// routes.get('/testDiseaseResult', Controller.tesSymptomp)
 
 // output penyakit dari test symptomp (name, description)
-routes.post('/testDiseaseResult', Controller.diseaseResult)
+// routes.post('/testDiseaseResult', Controller.diseaseResult)
 
 module.exports = routes
