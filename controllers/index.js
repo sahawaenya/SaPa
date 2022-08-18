@@ -1,7 +1,8 @@
 
 class Controller {
     static home (req,res) {
-        res.render('home')
+        const titlePage = 'home'
+        res.render('home', {titlePage})
     }
 }
 

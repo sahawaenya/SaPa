@@ -1,12 +1,18 @@
 const { User, Profile } = require('../models/index')
+const session = require('express-session')
 
 class Controller{
     static home(req, res){
-        res.render('./user/home')
+        const titlePage = 'User Home'
+       let coba = req.session.coba = 'coba 11111111111111a'
+        res.render('./user/home', {titlePage, coba})
     }
 
 
     static getSignup (req,res) {
+        console.log(req.session.coba);
+        const titlePage = 'home'
+
         res.render('./user/signup')
     }
 
@@ -23,8 +29,8 @@ class Controller{
     }
 
     static signin (req,res) {
-        
-        res.render('./user/login')
+       
+        res.render('./user/signin')
     }
 
     static profile (req,res) {
