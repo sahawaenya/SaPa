@@ -1,7 +1,9 @@
 class Controller{
 
     static home(req, res){
-        res.render('./diseases/home')
+        const titlePage = 'Home Diseases'
+
+        res.render('./diseases/home', {titlePage})
     }
 }
 

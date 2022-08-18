@@ -1,43 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<title>Shoe Store</title>
+    <%- include('../partials/head.ejs')%>
 </head>
-
 <body>
-	<h1>Shoe Store</h1>
-
-	<form>
+    <%- include('../partials/nav.ejs')%>
+	
+    <form action="/users/signup" method="post">
 		<div>
-			<label>Name</label>
-			<input type="text" placeholder="Adidas Superstar">
+			<label>Username</label>
+			<input type="text" placeholder="Your Full Name" name="username" required>
 		</div>
 		<div>
-			<label>Category</label>
-			<select>
-				<option value="">SELECT ONE</option>
-			</select>
-		</div>
+			<label>Password</label>
+			<input type="text" placeholder="Your Full Name" name="password" required>
+		</div>		
 		<div>
-			<label>Min Size</label>
-			<input type="text" placeholder="36">
-		</div>
-		<div>
-			<label>Max Size</label>
-			<input type="text" placeholder="40">
-		</div>
-		<div>
-			<label>Status</label>
-			<select>
-				<option>Available</option>
-				<option>Discontinued</option>
-			</select>
-		</div>
-		<div>
-			<button type="submit">Add</button>
+			<button type="submit">Signup</button>
 		</div>
 	</form>
 </body>
-
 </html>
