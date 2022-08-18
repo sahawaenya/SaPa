@@ -9,7 +9,7 @@ routes.get('/signup', Controller.getSignup)
 routes.post('/signup', Controller.postSignup)
 
 // log in (username, passwords)
-routes.get('/signin', Controller.login)
+routes.get('/signin', Controller.signin)
 
 // profile + button tes Symptomp (fullname, disease + symptom% + new Date ())
 routes.get('/profile', Controller.profile)
