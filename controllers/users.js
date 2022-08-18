@@ -22,7 +22,8 @@ class Controller{
         .catch( err => res.send(err))
     }
 
-    static login (req,res) {
+    static signin (req,res) {
+        
         res.render('./user/login')
     }
 
